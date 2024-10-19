@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://6s5q5q8eq44k"]
+
+[ext_resource type="Script" path="res://Objects/Entities/Follower/Scripts/spawner.gd" id="1_dfhnx"]
+[ext_resource type="PackedScene" uid="uid://bd771r6ueoh88" path="res://Objects/Entities/Follower/ent_follower.tscn" id="2_gjd7t"]
+
+[node name="FollowerSpawner" type="Node2D"]
+script = ExtResource("1_dfhnx")
+p_template = ExtResource("2_gjd7t")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd771r6ueoh88"]
+
+[ext_resource type="SpriteFrames" uid="uid://dg5my0wmbguk6" path="res://Objects/Entities/Follower/Assets/sf_follower.tres" id="1_esq64"]
+[ext_resource type="Script" path="res://Objects/Entities/Follower/Scripts/follower_controller.gd" id="1_uc3ok"]
+[ext_resource type="Resource" uid="uid://b8p5incx8jhfp" path="res://Resources/res_player_state.tres" id="2_dqrs2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lv6v4"]
+radius = 4.0
+
+[node name="Follower" type="CharacterBody2D"]
+scale = Vector2(5, 5)
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_uc3ok")
+p_player_state = ExtResource("2_dqrs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lv6v4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_esq64")
+frame_progress = 0.633579
